@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uproot Clean Creative Audit</title>
+<style>
+  :root{
+    --ink:#14211d; --muted:#5b6b66; --line:#e3e9e6; --bg:#f6f8f7; --card:#ffffff;
+    --brand:#0f6b4f; --brand-2:#15936c; --brand-soft:#e5f3ed; --accent:#f0a12b; --accent-soft:#fff4e2;
+    --red:#c2493c;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+  header.hero{background:linear-gradient(135deg,#0b3d2e 0%,#0f6b4f 60%,#15936c 100%);color:#fff;padding:56px 0 64px}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.8;font-weight:600}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:10px 0 14px;letter-spacing:-.02em}
+  .hero p{max-width:680px;font-size:18px;opacity:.92;margin:0}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;font-size:14px;opacity:.85}
+  main{margin-top:-32px}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;margin-bottom:22px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  h2{font-size:24px;margin:0 0 6px;letter-spacing:-.01em}
+  h2 .num{display:inline-block;color:var(--brand);margin-right:8px;font-variant-numeric:tabular-nums}
+  .lede{color:var(--muted);margin:0 0 22px}
+  h3{font-size:17px;margin:22px 0 8px}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+  .kpi{background:var(--bg);border-radius:12px;padding:16px 18px}
+  .kpi b{display:block;font-size:28px;letter-spacing:-.02em;color:var(--brand);font-variant-numeric:tabular-nums}
+  .kpi span{font-size:13px;color:var(--muted)}
+  .callout{background:var(--brand-soft);border-left:4px solid var(--brand);border-radius:10px;padding:16px 18px;margin:18px 0}
+  .callout.warm{background:var(--accent-soft);border-color:var(--accent)}
+  .callout b{color:var(--brand)}
+  .callout.warm b{color:#9a5c00}
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  th,td{text-align:left;padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+  td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+  .tbl{overflow-x:auto}
+  .tag{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--brand-soft);color:var(--brand);white-space:nowrap}
+  .tag.hot{background:#fde7e4;color:var(--red)}
+  .tag.amb{background:var(--accent-soft);color:#9a5c00}
+  .bars{display:grid;gap:12px;margin-top:8px}
+  .bar{display:grid;grid-template-columns:200px 1fr 54px;gap:12px;align-items:center;font-size:14.5px}
+  .track{background:var(--bg);border-radius:6px;height:22px;overflow:hidden}
+  .fill{height:100%;background:var(--brand);border-radius:6px}
+  .fill.b2{background:var(--brand-2)} .fill.b3{background:#5fb99a} .fill.b4{background:#9fd3bf} .fill.b5{background:#c9e6da}
+  .bar .pct{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:18px 20px;background:#fff}
+  .card h4{margin:0 0 6px;font-size:16px}
+  .card p{margin:0;color:var(--muted);font-size:14.5px}
+  .quote{font-style:italic;color:var(--ink);background:var(--bg);border-radius:8px;padding:10px 12px;margin:10px 0 0;font-size:14px}
+  ol.clean,ul.clean{padding-left:20px;margin:8px 0}
+  ol.clean li,ul.clean li{margin:6px 0}
+  .plan{counter-reset:p;display:grid;gap:12px}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+  .step .n{width:44px;height:44px;border-radius:12px;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:700}
+  .step h4{margin:2px 0 4px}
+  .step p{margin:0;color:var(--muted);font-size:14.5px}
+  .cta{background:linear-gradient(135deg,#0b3d2e,#0f6b4f);color:#fff;border:0}
+  .cta h2{color:#fff}
+  .cta p{opacity:.92}
+  .cta a{color:#fff}
+  .btn{display:inline-block;background:var(--accent);color:#1c1300 !important;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:10px;margin:8px 10px 0 0}
+  .btn.ghost{background:rgba(255,255,255,.12);color:#fff !important;border:1px solid rgba(255,255,255,.35)}
+  .small{font-size:13px;color:var(--muted)}
+  footer{padding:10px 0 50px;text-align:center}
+  a{color:var(--brand)}
+  @media (max-width:640px){
+    section{padding:22px 18px}
+    .bar{grid-template-columns:1fr 46px}
+    .bar .lbl{grid-column:1/-1}
+    .wrap{padding:0 16px}
+  }
+  @media print{
+    body{background:#fff} header.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section{break-inside:avoid;box-shadow:none} main{margin-top:0}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Creative &amp; Ad Research · Prepared for the Uproot Clean team</div>
+    <h1>What's selling, what's scaling, and what I'd edit next</h1>
+    <p>I went through your storefront and the ads you're running on Meta right now. Here's what I found about your best seller, the angles you're putting money behind, and where I think the next winning edits will come from.</p>
+    <div class="meta">
+      <span><b>Prepared by:</b> Iktiar Nazib, DTC Video Ad Editor</span>
+      <span><b>Date:</b> October 15, 2026</span>
+      <span><b>Sources:</b> uprootclean.com and the Meta Ad Library (US, active ads)</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- SUMMARY -->
+  <section>
+    <h2><span class="num">01</span>The short version</h2>
+    <p class="lede">Three takeaways that shaped everything else in this report.</p>
+    <div class="kpis">
+      <div class="kpi"><b>24,893</b><span>reviews pooled on the Cleaner line (4.9★)</span></div>
+      <div class="kpi"><b>#1</b><span>Uproot Cleaner Pro™ in your "Best selling" sort</span></div>
+      <div class="kpi"><b>~1,700</b><span>active Meta ads in the Ad Library search</span></div>
+      <div class="kpi"><b>61%</b><span>of the 217 ads I sampled push the Washing Machine Cleaner</span></div>
+    </div>
+    <div class="callout">
+      <b>1. The Uproot Cleaner Pro™ ($16.99) is the hero product.</b> It's first when your store is sorted by best selling, it carries the brand's ~25k reviews, it's the "viral" tool in your press, and it's the product stocked at Target, Walmart and Petco. Every bundle, including the Complete Package, is built around it.
+    </div>
+    <div class="callout warm">
+      <b>2. Most of your current ad budget is going to the Washing Machine Cleaner Tablets.</b> They're the #2 best seller and make up roughly 6 of every 10 active ads. They also have the most variants per concept, sometimes 4–6 ads on the same creative and text. Running that many versions of one product usually means the angle is profitable and still being scaled.
+    </div>
+    <div class="callout">
+      <b>3. The ads that win sell a hidden cause before they show the product.</b> Biofilm in the washer, hair stuck sideways in the carpet, the $150 groomer bill. They lead with "it's not your dog," prove it with something you can see (dark drain water, a pile of scraped fur), and close with the 60-day guarantee. That approach is very dependent on editing: how fast the hook lands, when the proof appears, how the cutdowns are paced.
+    </div>
+  </section>
+
+  <!-- BEST SELLER -->
+  <section>
+    <h2><span class="num">02</span>Best-selling products</h2>
+    <p class="lede">This is the order your store shows when it's sorted by <i>Best selling</i>, the closest public signal to real sales volume.</p>
+    <div class="tbl">
+    <table>
+      <thead><tr><th>Rank</th><th>Product</th><th class="r">Price</th><th class="r">Reviews</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><b>Uproot Cleaner Pro™</b></td><td class="r">$16.99</td><td class="r">24,893*</td><td><span class="tag">Hero / entry product</span></td></tr>
+        <tr><td>2</td><td><b>Washing Machine Cleaner Pro</b></td><td class="r">$19.99</td><td class="r">617</td><td><span class="tag hot">Most ad spend right now</span></td></tr>
+        <tr><td>3</td><td>Washing Machine Cleaner Ultra</td><td class="r">$29.99</td><td class="r">617</td><td>Upsell tier</td></tr>
+        <tr><td>4</td><td>Effective Fur-Free Starter Kit (Mini, Pro, Xtra)</td><td class="r">$64.99</td><td class="r">24,893*</td><td><span class="tag amb">Top bundle</span></td></tr>
+        <tr><td>5</td><td>Daily Essentials Kit (Mini, Pro, Max)</td><td class="r">$49.99</td><td class="r">24,893*</td><td>Bundle</td></tr>
+        <tr><td>6</td><td>Uproot Cleaner Xtra™</td><td class="r">$49.99</td><td class="r">24,893*</td><td>Long-handle, AOV lift</td></tr>
+        <tr><td>7</td><td>Washing Machine Cleaner Turbo</td><td class="r">$49.99</td><td class="r">617</td><td>Upsell tier</td></tr>
+        <tr><td>8</td><td>Uproot Pet Grooming Kit</td><td class="r">$199.99</td><td class="r">323</td><td><span class="tag">High-ticket, actively advertised</span></td></tr>
+        <tr><td>14</td><td>The Ultimate Uproot Clean Bundle (Complete Package)</td><td class="r">$89.99</td><td class="r">24,893*</td><td>All cleaners + deshedder</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="small">*The Cleaner line shares one review pool across the single tools and bundles. Prices are the listed prices; most items were showing a ~10% sale price in the Fall Sale.</p>
+
+    <h3>How the offer is built</h3>
+    <ul class="clean">
+      <li><b>Low-price entry product, then bundles:</b> the $16.99 Pro gets people in, and the Starter, Daily Essentials and Complete bundles anchor against a "was $112–$128" price.</li>
+      <li><b>Risk reversal everywhere:</b> 60-day money-back guarantee, free returns, "Guaranteed results or your money back."</li>
+      <li><b>Urgency stack:</b> Fall Sale free gift, a $10 mystery gift by end of day, tiered cart gifts, and "Buy 2 Get 2 Free" on the washer tablets.</li>
+      <li><b>Credibility:</b> patented design, BuzzFeed / Today / Nifty press, and retail presence at Target, Walmart and Petco.</li>
+    </ul>
+  </section>
+
+  <!-- AD MIX -->
+  <section>
+    <h2><span class="num">03</span>What you're running on Meta right now</h2>
+    <p class="lede">I pulled 217 active US ads from the Meta Ad Library, sorted by impressions, and grouped them by product.</p>
+    <div class="bars">
+      <div class="bar"><span class="lbl">Washing Machine Cleaner</span><div class="track"><div class="fill" style="width:61%"></div></div><span class="pct">61%</span></div>
+      <div class="bar"><span class="lbl">Pet Hair Remover (Cleaner Pro)</span><div class="track"><div class="fill b2" style="width:19%"></div></div><span class="pct">19%</span></div>
+      <div class="bar"><span class="lbl">Grooming Kit</span><div class="track"><div class="fill b3" style="width:10%"></div></div><span class="pct">10%</span></div>
+      <div class="bar"><span class="lbl">Sitewide sales / holiday</span><div class="track"><div class="fill b4" style="width:4%"></div></div><span class="pct">4%</span></div>
+      <div class="bar"><span class="lbl">Gloves, car freshener, other</span><div class="track"><div class="fill b5" style="width:6%"></div></div><span class="pct">6%</span></div>
+    </div>
+    <p class="small" style="margin-top:14px">Counts: Washer 132 · Hair remover 41 · Grooming 22 · Sales 8 · Other 14 (n = 217).</p>
+
+    <h3>What stood out about the creatives</h3>
+    <ul class="clean">
+      <li><b>Mostly 9:16 UGC video:</b> selfie-style creators holding the product, with bold text overlays such as "LAST CHANCE · BUY 2 GET 2 FREE."</li>
+      <li><b>Lengths range from 10 seconds to 6+ minutes.</b> The same washer copy runs with 0:10, 0:33, 1:49, 3:43 and 6:12 videos, which suggests a long-form teardown or demo gets cut down into many short versions and each one is tested.</li>
+      <li><b>One script, many videos.</b> The top washer text ("If you've ever rewashed the same load twice…") appears on <b>62 ads covering 160+ placements</b>. You keep the copy that converts and swap the video, which means you need a lot of edits.</li>
+      <li><b>Advertorial funnels:</b> traffic goes to <code>order.uprootclean.com/…-mustyclothes</code>-style landers and <code>cc.uprootclean.com</code>. The ad's job is to get the click, and the page does the selling.</li>
+    </ul>
+  </section>
+
+  <!-- WINNING ANGLES -->
+  <section>
+    <h2><span class="num">04</span>The angles that are working</h2>
+    <p class="lede">Ranked by how many ads and variants you're running on each. An angle that keeps getting new variants is one the media buyer is confident in.</p>
+
+    <div class="grid2">
+      <div class="card">
+        <h4>① "It's not your dog, it's your washer" <span class="tag hot">#1 angle</span></h4>
+        <p>Redirects the blame to a hidden cause (biofilm), explains how it works in plain language, offers one simple fix, and backs it with the 60-day guarantee. 62+ ads.</p>
+        <div class="quote">"The smell isn't on your clothes. It's inside your washing machine."</div>
+      </div>
+      <div class="card">
+        <h4>② The repair-tech expert <span class="tag hot">Scaling</span></h4>
+        <p>A technician with "19 years, 6,000 machines" takes a washer apart on camera. These are long-form (3–6 min) videos built on authority and reveal. Several versions are running (Danny in Chicago, the Jacksonville van tech).</p>
+        <div class="quote">"A customer told me to junk a three-year-old washing machine…"</div>
+      </div>
+      <div class="card">
+        <h4>③ Side-by-side test <span class="tag">Strong proof</span></h4>
+        <p>Vinegar vs. Affresh vs. Uproot in the same machine on the same cycle. The dark drain water is the moment that sells it. 9 ads, 47 placements, launched Sep 28, so it's still being scaled.</p>
+        <div class="quote">"…the water that drained out was seriously dark."</div>
+      </div>
+      <div class="card">
+        <h4>④ Naming the competitor <span class="tag amb">Bold</span></h4>
+        <p>Calls out Affresh/Whirlpool by name: "Whirlpool owns Affresh. Whirlpool also sold you the front-loader." It creates a clear enemy and a reason to switch.</p>
+      </div>
+      <div class="card">
+        <h4>⑤ Hidden health risk <span class="tag">Washer + Hair</span></h4>
+        <p>Rashes on a child, breakouts on the jawline, "protecting your lungs," and "NASA-inspired enzymes." For the hair remover, it's the musty smell that comes from the carpet, not the dog.</p>
+        <div class="quote">"That musty smell in your house isn't your dog. It's what's buried in your carpet."</div>
+      </div>
+      <div class="card">
+        <h4>⑥ Cost anchoring (Grooming Kit) <span class="tag">High-ticket</span></h4>
+        <p>"$150 per grooming visit. A 4-week waitlist. And STILL fur everywhere?" It makes a $199 kit feel cheaper than one appointment. 12+ live variants.</p>
+      </div>
+      <div class="card">
+        <h4>⑦ Tongue-in-cheek "apology" statics <span class="tag amb">Brand voice</span></h4>
+        <p>"AN APOLOGY TO OUR CUSTOMERS" and "OFFICIAL STATEMENT": humorous complaint letters about the product working too well. Good for stopping the scroll and building the brand.</p>
+      </div>
+      <div class="card">
+        <h4>⑧ Evergreen hair-remover demo <span class="tag">Running since 2025</span></h4>
+        <p>"Revitalize your beloved spaces with this MIRACLE tool!" and the Target / Walmart / Petco announcements have been live since mid-2025. The satisfying scrape-and-reveal demo still holds up after more than a year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAPS -->
+  <section>
+    <h2><span class="num">05</span>Where I see room to grow</h2>
+    <p class="lede">These are gaps I noticed from the outside. I'd validate them against your ROAS data before acting on any of them.</p>
+    <ol class="clean">
+      <li><b>The hero product gets older creative.</b> The washer has expert, test and teardown formats, while the Cleaner Pro mostly runs the 2025 "MIRACLE tool" demo and one "musty carpet" ad. Bringing the washer's mechanism-plus-proof structure to the Pro (for example, "Why your vacuum can't get this hair," with a macro shot of hair stuck sideways in carpet fibers, then the scrape) looks like the biggest available win.</li>
+      <li><b>Long-form winners need more short versions.</b> The 3–6 minute teardowns are great for authority, but each one has 5–10 strong moments (panel comes off, gunk revealed, dark water). Each moment can become a hook for its own 15–30 second ad.</li>
+      <li><b>Turn the statics into video.</b> The "Apology" and "Official Statement" statics have a strong voice. Acted as a short skit with a deadpan spokesperson reading the "complaints," they'd make cheap, scroll-stopping video.</li>
+      <li><b>Q4 gifting.</b> Last December you ran "The perfect gift for any pet owner." With Black Friday and the holidays close, gift-framed edits of the Starter Kit and Complete Package (unboxing, a "for the dog mom who has everything" hook) could raise order value.</li>
+      <li><b>More hooks per winner.</b> Swapping just the first 3 seconds of a proven body is the cheapest test in paid social. Here are five I'd test on the top washer ad:
+        <ul class="clean">
+          <li>"Your washer is lying to you." (dark-water reveal in the first frame)</li>
+          <li>"I made my husband smell the washer door. Big mistake."</li>
+          <li>"POV: you rewash the dog towels for the third time this week"</li>
+          <li>"Repair techs hate when I show you this." (panel off, cold open)</li>
+          <li>"Vinegar did nothing. This did." (split-screen)</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <!-- PLAN -->
+  <section>
+    <h2><span class="num">06</span>What I'd deliver in my first 2 weeks</h2>
+    <p class="lede">This is focused on output volume and testable variants, since that's how your ad account is set up to run.</p>
+    <div class="plan">
+      <div class="step"><div class="n">1</div><div><h4>Hook-swap pack for your top washer ad</h4><p>The same proven body with 5–8 new 3-second openers: text-first, cold open on the dark water, POV, and competitor callout. Delivered in 9:16 and 4:5.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h4>Cutdowns from the repair-tech teardowns</h4><p>Turn each long-form teardown into 15, 30 and 60 second versions, each built around a single reveal moment, with tight captions and pacing for people watching muted.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h4>A new hero ad for the Cleaner Pro</h4><p>Hidden cause, then a macro proof shot, then a satisfying scrape reveal, then the 60-day guarantee. This brings your best-performing story structure to your best-selling product.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h4>Q4 gift edits</h4><p>Starter Kit and Complete Package unboxing and gift-framed versions, timed for Black Friday through Christmas.</p></div></div>
+    </div>
+    <div class="callout" style="margin-top:22px"><b>Workflow:</b> 100% Adobe Premiere Pro, with After Effects for motion and captions. I organize project folders and file names so your team can open any edit and remix it. I'm available Monday–Friday, 9 AM–6 PM ET, and I already completed your paid trial.</div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Let's build the next winner together</h2>
+    <p>I've spent 6 years editing video, 4 of them on DTC and eCommerce ads: UGC, product demos, problem-solution, before-and-after and testimonial formats. I'd love to start with the hook-swap pack on your top washer ad and let the results speak for themselves.</p>
+    <a class="btn" href="https://vimeo.com/1144251525">Watch my DTC ad samples</a>
+    <a class="btn ghost" href="https://vimeo.com/1095221204">UGC ad sample</a>
+    <p class="small" style="color:rgba(255,255,255,.75);margin-top:18px">Iktiar Nazib · DTC Video Ad Editor</p>
+  </section>
+
+  <footer>
+    <p class="small">Method: storefront data from uprootclean.com (collection sorted by "Best selling," product pages) and 217 active US ads from the Meta Ad Library (keyword "uproot clean," sorted by impressions), reviewed October 15, 2026. Ad Library data doesn't include spend or ROAS, so "scaling" is inferred from how many variants are running and how long they've run. Ad copy is quoted briefly for analysis only.</p>
+  </footer>
+</main>
+</body>
+</html>
